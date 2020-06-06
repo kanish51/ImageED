@@ -1,5 +1,6 @@
 package com.example.imageed;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -23,6 +24,8 @@ import android.os.Handler;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -95,6 +98,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case R.id.btnHelp:
+                Intent intentHelp=new Intent(this,com.example.imageed.HelpActivity.class);
+                startActivity(intentHelp);
+                break;
+            case R.id.btnAbout:
+                Intent intentAbout=new Intent(this,com.example.imageed.AboutActivity.class);
+                startActivity(intentAbout);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/btnHelp"
+        android:title="Help"
+        app:showAsAction="never"
+        android:icon="@drawable/helpicon_foreground" />
+
+    <item
+        android:id="@+id/btnAbout"
+        android:title="About"
+        app:showAsAction="never"
+        android:icon="@drawable/abouticon_foreground" />
+</menu>
